@@ -1,0 +1,40 @@
+@import './portfolio.css';
+
+:root {
+  --text: #94a3b8;        /* Slate 400 */
+  --text-h: #f8fafc;      /* Slate 50 */
+  --bg: #0b1329;          /* Deep Slate Blue-Black */
+  --border: #1e293b;      /* Slate 800 */
+  --code-bg: #1f293d;     /* Deep slate card */
+  --accent: #38bdf8;      /* Sky Blue */
+  --accent-bg: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.4);
+  --social-bg: rgba(15, 23, 42, 0.7);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 25px -3px, rgba(0, 0, 0, 0.2) 0 4px 6px -2px;
+
+  --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0b1329 0%, #111a2e 50%, #070a13 100%);
+  background-attachment: fixed;
+  color: var(--text);
+}
