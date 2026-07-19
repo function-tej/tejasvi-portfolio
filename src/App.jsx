@@ -23,7 +23,7 @@ function App() {
         <About />
         <Skills />
         <Education />
-        {/* <Project /> */}
+        <Project />
       </main>
       <Footer />
     </>

@@ -16,7 +16,7 @@ const Navbar = () => {
 
   // Scroll Spy & Scroll Effect
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'education', 'projects', 'contact'];
+    const sections = ['home', 'about', 'skills', 'education', 'projects'];
 
     const handleScroll = () => {
       // Toggle scrolled class
@@ -72,18 +72,11 @@ const Navbar = () => {
             <li className={`navbar-link ${activeLink === 'education' ? 'active' : ''}`}>
               <a href="#education" onClick={() => handleLinkClick('education')}>Education</a>
             </li>
-            {/* <li className={`navbar-link ${activeLink === 'projects' ? 'active' : ''}`}>
+            <li className={`navbar-link ${activeLink === 'projects' ? 'active' : ''}`}>
               <a href="#projects" onClick={() => handleLinkClick('projects')}>Projects</a>
-            </li> */}
-            {/* <li className={`navbar-link ${activeLink === 'contact' ? 'active' : ''}`}>
-              <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
-            </li> */}
+            </li>
           </ul>
         </div>
-
-        <a href="#contact" className="navbar-cta-btn">
-          Get in Touch
-        </a>
       </div>
     </nav>
   );

@@ -35,7 +35,6 @@ const Footer = () => {
               <li className="footer-nav-link-item"><a href="#skills">Skills</a></li>
               <li className="footer-nav-link-item"><a href="#education">Education</a></li>
               <li className="footer-nav-link-item"><a href="#projects">Projects</a></li>
-              <li className="footer-nav-link-item"><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -49,7 +48,7 @@ const Footer = () => {
               </a>
               <a href="tel:+918218512192" className="footer-contact-item">
                 <span className="footer-contact-icon"><MdPhone /></span>
-                <span>+91 902757923</span>
+                <span>+91 9027579223</span>
               </a>
             </div>
           </div>

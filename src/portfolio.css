@@ -1589,3 +1589,214 @@ body {
   from, to { color: transparent }
   50% { color: var(--primary) }
 }
+
+/* Premium Project Card Showcase */
+.projects-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.premium-project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px -5px rgba(46, 44, 42, 0.05);
+  transition: var(--transition-premium);
+}
+
+.premium-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(46, 44, 42, 0.1), 0 0 0 1px rgba(176, 141, 87, 0.15);
+}
+
+/* Top Image Area */
+.project-image-showcase {
+  background-color: #F4EBE0;
+  padding: 20px 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.image-container {
+  width: 100%;
+  max-width: 700px;
+  background: transparent;
+  border-radius: 12px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-project-card:hover .image-container img {
+  transform: scale(1.02);
+}
+
+/* Nav arrows for image */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(46, 44, 42, 0.08);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: var(--transition-premium);
+  z-index: 2;
+}
+
+.nav-arrow:hover {
+  color: var(--text-main);
+  border-color: rgba(46, 44, 42, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.left-arrow {
+  left: 12px;
+}
+
+.right-arrow {
+  right: 12px;
+}
+
+/* Bottom Details Area */
+.project-details {
+  padding: 24px;
+  background: var(--bg-main);
+}
+
+.project-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.project-number {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.project-type-pill {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  background: #EFECE5;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+
+.project-title-main {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.project-desc-main {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  max-width: 100%;
+}
+
+.project-tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.project-tag-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(46, 44, 42, 0.05);
+  padding: 4px 10px;
+  border-radius: 100px;
+  transition: var(--transition-premium);
+}
+
+.project-tag-pill:hover {
+  background: rgba(46, 44, 42, 0.08);
+}
+
+.project-links-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.project-link-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition-premium);
+}
+
+.project-link-action svg {
+  color: var(--text-main);
+  transition: transform 0.3s ease;
+}
+
+.project-link-action:hover {
+  color: var(--primary);
+}
+
+.project-link-action:hover svg {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(46, 44, 42, 0.15);
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 24px;
+  border-radius: 100px;
+  background: var(--secondary);
+}
