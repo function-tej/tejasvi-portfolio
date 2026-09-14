@@ -3,6 +3,12 @@ import { MdSchool, MdWork } from './Icons';
 const Education = () => {
   const educationData = [
     {
+      type: 'education',
+      title: 'Shri Guru Ram Rai University',
+      subtitle: 'Bachelor of Science – Information Technology',
+      duration: 'April 2019 – July 2022'
+    },
+    {
       type: 'internship',
       title: 'ToXSL Technologies',
       subtitle: 'Web Development Intern (React.js)',
@@ -12,44 +18,68 @@ const Education = () => {
     {
       type: 'education',
       title: 'Shri Guru Ram Rai University',
-      subtitle: 'Bachelor of Science – Information Technology',
-      badge: '8.65 CGPA',
-      duration: 'April 2019 – July 2022'
+      subtitle: 'Master of Computer Applications (MCA)',
+      badge: 'Current',
+      duration: '2026 – Present'
     }
   ];
 
   return (
-    <section id="education" className="section education-section-layout">
-      <div className="portfolio-container">
-        <span className="education-section-label">ACADEMICS</span>
-        
-        <h2 className="education-section-title">
-          Education
-        </h2>
-        
-        <p className="education-section-subtitle">
-          Strong academic foundation in computer applications and information technology.
-        </p>
+    <div id="academics" className="education-dark-wrapper">
+      <section className="section education-section-layout">
+        <div className="portfolio-container">
+          <span className="education-section-label">ACADEMICS</span>
+          
+          <h2 className="education-section-title">
+            Education
+          </h2>
+          
+          <p className="education-section-subtitle">
+            Strong academic foundation in computer applications and information technology.
+          </p>
 
-        <div className="education-cards-grid">
-          {educationData.map((edu, index) => (
-            <div key={index} className="education-card">
-              <div className="education-icon-wrapper">
-                {edu.type === 'internship' ? <MdWork /> : <MdSchool />}
-              </div>
-              <div className="education-details">
-                <h3 className="education-university">{edu.title}</h3>
-                <p className="education-degree">{edu.subtitle}</p>
-                <div className="education-meta">
-                  <span className="education-cgpa">{edu.badge}</span>
-                  <span className="education-duration">{edu.duration}</span>
+          <div className="education-marquee-container">
+            {/* Track 1 */}
+            <div className="education-marquee-track">
+              {educationData.map((edu, index) => (
+                <div key={`track1-${index}`} className="education-card marquee-card">
+                  <div className="education-icon-wrapper">
+                    {edu.type === 'internship' ? <MdWork /> : <MdSchool />}
+                  </div>
+                  <div className="education-details">
+                    <h3 className="education-university">{edu.title}</h3>
+                    <p className="education-degree">{edu.subtitle}</p>
+                    <div className="education-meta">
+                      {edu.badge && <span className="education-cgpa">{edu.badge}</span>}
+                      <span className="education-duration">{edu.duration}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+            
+            {/* Track 2 (Duplicate for seamless loop) */}
+            <div className="education-marquee-track">
+              {educationData.map((edu, index) => (
+                <div key={`track2-${index}`} className="education-card marquee-card">
+                  <div className="education-icon-wrapper">
+                    {edu.type === 'internship' ? <MdWork /> : <MdSchool />}
+                  </div>
+                  <div className="education-details">
+                    <h3 className="education-university">{edu.title}</h3>
+                    <p className="education-degree">{edu.subtitle}</p>
+                    <div className="education-meta">
+                      {edu.badge && <span className="education-cgpa">{edu.badge}</span>}
+                      <span className="education-duration">{edu.duration}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

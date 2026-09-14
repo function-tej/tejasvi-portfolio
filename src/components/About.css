@@ -1,0 +1,437 @@
+.new-about-section {
+  background-color: #090a0f;
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(23, 107, 105, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(176, 141, 87, 0.05) 0%, transparent 50%);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 60px 24px 100px;
+  position: relative;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.new-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.new-about-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.new-about-header .btn-resume {
+  position: absolute;
+  right: 0;
+}
+
+.about-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  color: #2dd4bf;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.new-about-title {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 auto 24px;
+  max-width: 800px;
+  letter-spacing: -1px;
+}
+
+.gradient-text-pink {
+  background: linear-gradient(90deg, #176B64, #FCD34D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(90deg, #FCD34D, #176B64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.new-about-subtitle {
+  color: #94a3b8;
+  font-size: 17px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main Grid */
+.new-about-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* Photo Card */
+.about-photo-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 500px;
+  margin-top: 80px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transform: perspective(1000px) rotateY(15deg) scale(0.85);
+  filter: blur(15px);
+  transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.new-about-section.in-view .about-photo-card {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg) scale(1);
+  filter: blur(0px);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.about-photo-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.about-photo-role {
+  color: #176B64;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Right Content */
+.about-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Staggered Blur Reveal for Right Content Children */
+.about-content-right>* {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  filter: blur(10px);
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.new-about-section.in-view .about-content-right>* {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+
+.new-about-section.in-view .about-content-title {
+  transition-delay: 0.2s;
+}
+
+.new-about-section.in-view .about-content-desc {
+  transition-delay: 0.35s;
+}
+
+.new-about-section.in-view .about-bullet-grid {
+  transition-delay: 0.5s;
+}
+
+.new-about-section.in-view .about-contact-cards {
+  transition-delay: 0.65s;
+}
+
+.new-about-section.in-view .about-actions {
+  transition-delay: 0.8s;
+}
+
+.about-content-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.about-content-desc {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-bullet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  margin: 30px 0 40px;
+}
+
+.about-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bullet-icon {
+  color: #2dd4bf;
+  margin-top: 2px;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.bullet-text {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Contact Cards */
+.about-contact-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+.contact-icon {
+  color: #176B64;
+  font-size: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.contact-value {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.about-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-resume {
+  position: relative;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(90deg, #2dd4bf, #FCD34D, #176B64, #2dd4bf);
+  background-size: 300% 100%;
+}
+
+.btn-resume::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 150%; height: 300%;
+  background: conic-gradient(from 0deg, #090a0f 0%, #090a0f 70%, #2dd4bf 90%, #FCD34D 100%);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate-comet 2.5s linear infinite;
+  z-index: -2;
+  transition: opacity 0.3s ease;
+}
+
+.btn-resume::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #090a0f;
+  border-radius: 100px;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-resume:hover {
+  transform: translateY(-4px) scale(1.02);
+  color: #000;
+  box-shadow: 0 15px 30px rgba(45, 212, 191, 0.4);
+  animation: pan-gradient 3s linear infinite;
+}
+
+.btn-resume:hover::before {
+  opacity: 0;
+}
+
+.btn-resume:hover::after {
+  opacity: 0;
+  transform: scale(0.5);
+  border-radius: 50px;
+}
+
+.btn-resume svg {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-resume:hover svg {
+  transform: translateY(2px) scale(1.1);
+}
+
+@keyframes rotate-comet {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pan-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.btn-work {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-work:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Global WhatsApp FAB */
+.global-whatsapp-fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.global-whatsapp-fab:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .new-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-card {
+    height: 400px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-about-title {
+    font-size: 36px;
+  }
+
+  .about-content-title {
+    font-size: 26px;
+  }
+
+  .about-bullet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-contact-cards {
+    flex-direction: column;
+  }
+
+  .about-actions {
+    flex-direction: column;
+  }
+
+  .btn-resume,
+  .btn-work {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .global-whatsapp-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}

@@ -32,6 +32,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
 body {
   margin: 0;
   background: linear-gradient(135deg, #0b1329 0%, #111a2e 50%, #070a13 100%);
