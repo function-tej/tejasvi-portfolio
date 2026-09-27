@@ -38,7 +38,7 @@ const Project = () => {
         'Modern Frontend: Built responsive UI using Next.js App Router and Tailwind CSS.',
         'Secure Deployment: Configured automated CI/CD pipeline on Netlify for production.'
       ],
-      tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Netlify'],
+      tags: ['Next.js', 'Supabase', 'TypeScript','Tailwind CSS', 'Netlify'],
       image: '/images/travel.jpeg',
       demoUrl: 'https://travel-the-world-ttw.netlify.app/',
       repoUrl: '#'
