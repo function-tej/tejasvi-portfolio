@@ -62,7 +62,6 @@ const Skills = () => {
       barGradient: 'linear-gradient(90deg, #047857, #34d399)',
       skills: [
         { name: 'Manual Testing', percentage: 90, icon: <MdClipboard />, subSkills: ['Test Cases', 'User Flows', 'Edge Cases'], projects: ['QA Reports'] },
-        { name: 'Bug Reporting', percentage: 95, icon: <MdClipboard />, subSkills: ['Jira', 'Reproducibility', 'Priority'], projects: ['Issue Tracking'] },
         { name: 'Bug Fixing', percentage: 88, icon: <MdClipboard />, subSkills: ['Debugging', 'Hotfixes', 'Patching'], projects: ['Code Maintenance'] },
       ]
     },
